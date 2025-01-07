@@ -1,0 +1,32 @@
+.section__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 40px;
+    color: #000;
+
+    &-secondary {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 32px;
+        color: #000;    
+    }
+}
+.section__paragraph {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+
+    a {
+        font-weight: bold;
+        cursor: pointer;
+        transition: .2s ease;
+        text-underline-offset: 4px;
+
+        &:hover {
+            transition: .2s ease;
+            text-decoration: underline;
+        }
+    }
+}

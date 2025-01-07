@@ -1,0 +1,53 @@
+.media-banner {
+    background: #5f83a5;
+    padding: 53px 0 50px;
+
+    &__container {
+        max-width: 1330px;
+    }
+    &__wrapper {
+        display: flex;
+        @include adaptiveValue(gap, 130px, 38px, 1920px, 375px);
+        justify-content: center;
+        align-items: center;
+
+
+        @media (max-width:990px) {
+            flex-direction: column;
+        }
+    }
+    &__img {
+        img {
+           
+            object-fit: cover;
+            width: 600px;
+            height: 400px;
+
+            @media (max-width:1440px) {
+                width: 400px;
+                height: 300px;
+            }
+            @media (max-width:467px) {
+                width: 100%;
+                height: 260px;
+            }
+            
+        }
+    }
+    &__text {
+
+        max-width: 600px;
+        
+
+        h3 {
+            color: #fff;
+            margin-bottom: 22px;
+        }
+        p {
+            color: #fff;
+            margin-bottom: 25px;
+            
+        }
+
+    }
+}

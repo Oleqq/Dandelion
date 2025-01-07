@@ -1,0 +1,87 @@
+.hero {
+
+    @include adaptiveValue(padding-top, 150px, 42px, 1920px, 375px);
+    @include adaptiveValue(padding-bottom, 160px, 48px, 1920px, 375px);
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        &-desktop {
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: .5;
+
+            z-index: -1;
+
+            @media (max-width:567px) {
+                right: -300px;
+            }
+        }
+        &-mobile {
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: .5;
+
+            display: none;;
+        }
+    }
+
+    &__container {
+        max-width: 1130px;
+    }
+    &__wrapper {
+        h1 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            @include adaptiveValue(font-size, 64px, 40px, 1920px, 375px);
+            line-height: 150%;
+            text-transform: capitalize;
+            color: #000;
+
+            max-width: 600px;
+
+            margin-bottom: 32px;
+
+            i {
+                font-style: italic;
+            }
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
+            color: #000;
+
+            margin-bottom: 32px;
+
+            max-width: 600px;
+
+        }
+        p:nth-child(4) {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 12px;
+            color: #000;
+            margin-bottom: 16px;
+        }
+
+        .button__primary-orange {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__badges {
+        display: flex;
+        gap: 32px;
+
+        img {
+            display: flex;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+    }
+}

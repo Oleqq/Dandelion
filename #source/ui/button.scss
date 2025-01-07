@@ -3,17 +3,18 @@
     &__primary {
         padding: 16px;
         border-radius: 8px;
-        background-color: #000;
+        
         text-decoration: none;
         transition: .2s ease;
         height: fit-content;
+
+        display: flex;
+        width: fit-content;
+
+        cursor: pointer;
        
 
-        &:hover {
-            transition: .2s ease;
-            background: #292929;
-            transform: translateY(20px);
-        }
+        
 
         &-black {
             font-family: var(--font-family);
@@ -22,6 +23,107 @@
             line-height: 100%;
             text-align: center;
             color: #fff;
+            background-color: #000;
+
+            &:hover {
+                transition: .2s ease;
+                background: #292929;
+                transform: translateY(1px);
+            }
+        }
+
+        &-orange {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+            color: #000;
+            background: #ffac46;
+
+            &:hover {
+                transition: .2s ease;
+                background:  #f67f16;
+                transform: translateY(1px);
+            }
+        }
+
+        &-outlined {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+            color: #000;
+            background-color: transparent;
+            border: 1px solid #000;
+
+            &:hover {
+                transition: .2s ease;
+                background: #292929;
+                transform: translateY(1px);
+            }
+        }
+    }
+
+
+    &__secondary {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: .2s ease;
+        text-underline-offset: 3px;
+        width: fit-content;
+    
+
+        &-black {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162%;
+            color: #000;
+
+            &:hover {
+                transition: .2s ease;
+                text-decoration: underline;
+                
+                svg {
+                    transition: .2s ease;
+                    transform: rotate(-90deg);
+                }
+            }
+
+            svg {
+                display: flex;;
+                transition: .2s ease;
+               
+            }
+        }
+        &-white {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162%;
+            color: #fff;
+
+            &:hover {
+                transition: .2s ease;
+                text-decoration: underline;
+                
+                svg {
+                    transition: .2s ease;
+                    transform: rotate(-90deg);
+                }
+            }
+
+            svg {
+                display: flex;;
+                transition: .2s ease;
+               
+            }
         }
     }
 }
+
+
