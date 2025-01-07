@@ -1,0 +1,27 @@
+.button {
+
+    &__primary {
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #000;
+        text-decoration: none;
+        transition: .2s ease;
+        height: fit-content;
+       
+
+        &:hover {
+            transition: .2s ease;
+            background: #292929;
+            transform: translateY(20px);
+        }
+
+        &-black {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
