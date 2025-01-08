@@ -29,3 +29,36 @@
         right: 6px;
     }
 }
+
+
+.cta-banner__input {
+    position: relative;
+    width: fit-content;
+    
+    input {
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        padding: 24px;
+        position: relative;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+      
+        color: #fff;
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+           
+            color: #fff;
+        }
+    }
+    button {
+        position: absolute;
+        top: 12%;
+        right: 6px;
+    }
+}

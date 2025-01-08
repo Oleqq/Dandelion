@@ -2,6 +2,10 @@
     background-color: #F1F5FA;
     padding: 65px 0 65px;
 
+    @media (max-width:467px) {
+        padding-bottom: 32px;
+    }
+
     &__container {
         max-width: 1400px;
     }
@@ -168,7 +172,7 @@
         &__title {
             font-family: var(--second-family);
             font-weight: 400;
-            font-size: 32px;
+            @include adaptiveValue(font-size, 32px, 24px, 1440px, 375px);
             color: #fff;  
             
             position: absolute;

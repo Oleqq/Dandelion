@@ -1,0 +1,64 @@
+.about-hero {
+
+    &__container {
+        padding: 0;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+    &__img {
+        display: flex;
+        position: relative;
+        width: 100%;
+        
+        @media (max-width:1440px) {
+            aspect-ratio: 16 / 6;
+        }
+        @media (max-width:767px) {
+            aspect-ratio: 4 / 4;
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            opacity: .3;
+        }
+
+        img {
+            display: flex;
+            width: 100%;
+            object-fit: cover;
+
+            @media (max-width:767px) {
+                background-position: center;
+            }
+        }
+    }
+    &__title {
+        max-width: 1220px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        
+        @include adaptiveValue(padding-top, 48px, 32px, 1440px, 375px);
+        @include adaptiveValue(padding-bottom, 52px, 32px, 1440px, 375px);
+
+        margin: 0 24px;
+
+        h2 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 22px;
+            text-align: center;
+            color: #000;        
+        }
+    }
+}

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 document.addEventListener("DOMContentLoaded", () => {
-    const testimonialsSlider = new Swiper('.team-slider', {
+    const teamSlider = new Swiper('.team-slider', {
       slidesPerView: 1,
       spaceBetween: 24,
       breakpoints: {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           slidesPerView: 1,
         },
         0: {
-            slidesPerView: 1,
+          slidesPerView: 1,
         },
       },
       navigation: {
@@ -72,3 +72,42 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   
   
+
+
+// our-story slider
+
+document.addEventListener("DOMContentLoaded", () => {
+  const newsSlider = new Swiper('.news__slider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    breakpoints: {
+      1920: {
+        slidesPerView: 4,
+      },
+      
+      1440: {
+        slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      0: {
+          slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.news__slider-button-next',
+      prevEl: '.news__slider-button-prev',
+    },
+    pagination: {
+      el: '.news__slider-pagination',
+      clickable: true,
+    },
+  });
+});

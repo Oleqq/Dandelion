@@ -3,6 +3,9 @@
 
     padding: 63px 0 100px;
 
+    @include adaptiveValue(padding-bottom, 100px, 54px, 1440px, 375px);
+    @include adaptiveValue(padding-top, 63px, 36px, 1440px, 375px);
+
     svg {
         flex-shrink: 0;
     }
@@ -12,7 +15,7 @@
     }
     &__wrapper {
         display: flex;
-        @include adaptiveValue(gap, 100px, 12px, 1200px, 375px);
+        @include adaptiveValue(gap, 100px, 65px, 1200px, 375px);
         justify-content: space-between;
 
         @media (max-width:991px) {
@@ -112,7 +115,7 @@
             font-size: 40px;
             color: #000; 
 
-            margin-bottom: 3rem;
+            @include adaptiveValue(margin-bottom, 32px, 21px, 1440px, 375px);
             
             i {
                 font-style: italic;

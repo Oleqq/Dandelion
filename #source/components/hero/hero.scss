@@ -78,6 +78,10 @@
         display: flex;
         gap: 32px;
 
+        @media (max-width:467px) {
+            gap: 16px;
+        }
+
         img {
             display: flex;
             flex-shrink: 0;

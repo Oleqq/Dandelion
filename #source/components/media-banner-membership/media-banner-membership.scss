@@ -1,0 +1,43 @@
+.media-banner-membership {
+
+    @include adaptiveValue(padding-top, 60px, 62px, 1440px, 375px);
+    @include adaptiveValue(padding-bottom, 80px, 96px, 1440px, 375px);
+
+    background: #5f83a5;
+
+    &__container {
+        max-width: 800px;
+    }
+    &__wrapper {
+        h3 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 34px;
+            text-align: center;
+            color: #fff;
+
+            margin-bottom: 16px;
+        }
+        p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 162%;
+            text-align: center;
+            color: #fff;
+
+            margin-bottom: 22px;
+        }
+    }
+
+    .hero__badges {
+        justify-content: center;
+
+        @media (max-width:467px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}
