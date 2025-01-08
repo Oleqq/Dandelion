@@ -1,0 +1,31 @@
+.footer-signup__input {
+    position: relative;
+    width: fit-content;
+    
+    input {
+        background-color: #fff;
+        border: 1px solid #9d9393;
+        border-radius: 8px;
+        padding: 24px;
+        position: relative;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+      
+        color: #000;
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+           
+            color: #c8c8c8;
+        }
+    }
+    button {
+        position: absolute;
+        top: 12%;
+        right: 6px;
+    }
+}

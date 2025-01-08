@@ -4,6 +4,10 @@
     font-size: 40px;
     color: #000;
 
+    i {
+        font-style: italic;
+    }
+
     &-secondary {
         font-family: var(--second-family);
         font-weight: 400;
