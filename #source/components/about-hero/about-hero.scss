@@ -1,5 +1,9 @@
 .about-hero {
 
+    @media (max-width:567px) {
+        background: #fcf6f0;
+    }
+
     &__container {
         padding: 0;
     }
@@ -12,6 +16,7 @@
         display: flex;
         position: relative;
         width: 100%;
+        max-height: 637px;
         
         @media (max-width:1440px) {
             aspect-ratio: 16 / 6;
@@ -52,6 +57,8 @@
         @include adaptiveValue(padding-bottom, 52px, 32px, 1440px, 375px);
 
         margin: 0 24px;
+
+        
 
         h2 {
             font-family: var(--second-family);

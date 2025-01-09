@@ -1,0 +1,62 @@
+.why-us-bottom-grid__card--tip {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 0;
+   
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* Overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    width: 302px;
+    height: fit-content;
+
+    padding: 24px 24px 56px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 17px;
+
+    flex-direction: column;
+
+    h5 {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        color: #000;
+
+        text-align-last: left;
+
+        margin-bottom: 32px;
+
+        width: 100%;
+    }
+    p {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        color: #000;    
+    }
+
+}
+
+.tip-modal {
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        opacity: .05;
+
+        z-index: -12;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+}

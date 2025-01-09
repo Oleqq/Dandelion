@@ -1,0 +1,342 @@
+.why-us {
+    background: #f0f1f2;
+
+    @include adaptiveValue(padding-top, 6px, 24px, 1440px, 375px);
+    @include adaptiveValue(padding-bottom, 100px, 72px, 1440px, 375px);
+
+    &__container {
+        max-width: 1220px;
+    }
+    &__wrapper {
+        
+    }
+
+    &-top {
+       
+
+        padding: 54px;
+        border-bottom: 1px solid #818181;
+        margin-bottom: 54px;
+
+        @media (max-width:991px) {
+            border-bottom: 0;
+            @include adaptiveValue(padding, 42px, 32px, 991px, 375px)
+            
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+    
+            max-width: 1020px;
+    
+            margin:  0 auto;
+
+            @media (max-width:990px) {
+                flex-direction: column;
+                gap: 52px;
+            }
+           
+        }
+
+        &-block {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            max-width: 275px;
+
+            position: relative;
+
+            @media (max-width:991px) {
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    @include adaptiveValue(width, 900px, 324px, 991px, 375px);
+                    height: 1px;
+                    background-color: #818181;
+                    bottom: -28px;
+                    left: -36px;
+                }
+            }
+
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__img {
+                display: flex;
+
+                padding: 14px;
+                border: 1px solid #818181;
+                border-radius: 8px;
+
+                img {
+                    display: flex;;
+                    width: 32px;
+                    height: 32px;
+                    object-fit: cover;
+                }
+            }
+
+            &__title {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 100%;
+                color: #000;
+
+                margin-bottom: 4px;
+            }
+            &__subtitle {
+                font-family: var(--second-family);
+                font-weight: 400;
+                
+                @include adaptiveValue(font-size, 22px, 20px, 990px, 375px);
+                line-height: 118%;
+                color: #818181;      
+            }
+        }
+    }
+
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 74px;
+
+        
+        @media (max-width:991px) {
+            flex-direction: column;
+        }
+
+        .section__title {
+
+            @include adaptiveValue(font-size, 40px, 32px, 1440px, 375px);
+        }
+
+        &__info {
+
+        }
+        &-nums {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            padding-bottom: 56px;
+        
+            border-bottom: 0.50px solid #818181;
+
+            @media (max-width:467px) {
+                justify-content: space-between;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height:74%;
+                background-color: #818181;
+               
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+
+                @media (max-width:467px) {
+                    right: 48px;
+                }
+            }
+
+            .divider {
+                display: flex;
+                background: #f0f1f2;
+                height: 100%;
+                width: 1px;
+            }
+
+            &__num {
+                display: flex;
+                flex-direction: column;
+
+                padding-bottom: 56px;
+
+                
+
+                h3 {
+                    font-family: var(--second-family);
+                    font-weight: 400;
+                    font-size: 100px;
+                    @include adaptiveValue(font-size, 100px, 85px, 990px, 375px);
+                    color: #ffac46;
+
+                    position: relative;
+                    width: fit-content;
+
+                    display: flex;
+                    align-self: center;
+                    flex-direction: row-reverse;
+                    align-items: flex-end;
+
+                    margin-bottom:32px;
+
+                    span {
+                        font-family: var(--second-family);
+                        font-weight: 400;
+                        @include adaptiveValue(font-size, 35px, 20px, 990px, 375px);
+                        color: #818181;
+
+                        position: absolute;
+                        right: -24px;
+                        top: 24px;
+
+                        @media (max-width:767px) {
+                            right: -12px;
+                        }
+                    }
+                    div {
+                        font-family: var(--second-family);
+                        font-weight: 400;
+                        @include adaptiveValue(font-size, 28px, 22px, 990px, 375px);
+                        text-align: center;
+                        color: #818181;
+
+
+                    }
+                }
+                h5 {
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 100%;
+                    color: #000;
+
+                    margin-bottom: 10px;
+
+                    text-align: center;
+                }
+                p {
+                    font-family: var(--second-family);
+                    font-weight: 400;
+                    font-size: 21px;
+                    text-align: center;
+                    color: #818181;    
+
+                    max-width: 170px;
+                }
+            }
+        }
+
+        &__text {
+            max-width: 450px;
+
+            @media (max-width:991px) {
+                max-width: 100%;
+            }
+
+            .section__title {
+                margin-bottom: 24px;
+            }
+
+            .text {
+
+                p  {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+
+        &-grid {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 40px;
+
+            @include adaptiveValue(column-gap, 100px, 36px, 1920px, 375px);
+            @include adaptiveValue(row-gap, 40px, 65px, 1920px, 375px);
+
+            margin-top: 54px;
+
+            position: relative;
+
+            @media (max-width:567px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .why-us-bottom-grid__card:nth-child(1) >.why-us-bottom-grid__card--tip.tip-modal {
+
+                left: 0;
+            }
+            .why-us-bottom-grid__card:nth-child(3) >.why-us-bottom-grid__card--tip.tip-modal {
+
+                @media (max-width:567px) {
+                    left: 0;
+                }
+            }
+            .why-us-bottom-grid__card:nth-child(4) >.why-us-bottom-grid__card--tip.tip-modal {
+
+                @media (min-width:568px) {
+                    left: 0;
+                }
+            }
+            .why-us-bottom-grid__card:nth-child(5) >.why-us-bottom-grid__card--tip.tip-modal {
+
+                left: 0;
+            }
+            .why-us-bottom-grid__card:nth-child(7) >.why-us-bottom-grid__card--tip.tip-modal {
+                left: 0;
+              
+                
+            }
+
+
+            .why-us-bottom-grid__card:last-child {
+                @media (max-width:567px) {
+                    grid-column: 1 / -1;
+                }
+                
+            }
+
+            &__card  {
+                position: relative;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                height: fit-content;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    width:40px;
+                    height: 40px;
+
+                    margin-bottom: 8px;
+                }
+
+                .title {
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 100%;
+                    text-align: center;
+                    color: #1e1e1e;        
+
+                    margin-bottom: 16px;
+                }
+
+                &--tip {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+.why-us-bottom-nums > div:nth-child(3) > h3 > span {
+    @include adaptiveValue(font-size, 28px, 20px, 990px, 375px);
+}
+

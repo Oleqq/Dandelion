@@ -1,0 +1,189 @@
+.our-story {
+    background: #d9e3ed;
+
+    padding-top: 50px;
+
+    @include adaptiveValue(padding-top, 54px, 48px, 1440px, 375px);
+
+    @media (max-width:467px) {
+        padding-bottom: 54px;
+    }
+
+    &__container {
+        max-width: 1264px;
+        
+    }
+    &__wrapper {
+
+        .section__title {
+            text-align: center;
+            @include adaptiveValue(margin-bottom, 56px, 28px, 1440px, 375px);
+
+            @include adaptiveValue(font-size, 40px, 32px, 1440px, 375px);
+        }
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        border-radius: 18px;
+
+        position: relative;
+        z-index: 10;
+
+        &-wrapper {
+            border: 1px solid #dedede;
+            border-radius: 18px;
+            padding: 48px 80px 100px;
+            margin: 25px 20px 20px;
+
+            @include adaptiveValue(padding-top, 48px, 46px, 1440px, 375px);
+            @include adaptiveValue(padding-bottom, 100px, 46px, 1440px, 375px);
+            @include adaptiveValue(padding-right, 80px, 42px, 1440px, 375px);
+            @include adaptiveValue(padding-left, 80px, 42px, 1440px, 375px);
+
+            @include adaptiveValue(margin-top, 25px, 11px, 1440px, 375px);
+            @include adaptiveValue(margin-bottom, 20px, 11px, 1440px, 375px);
+            @include adaptiveValue(margin-right, 20px, 11px, 1440px, 375px);
+            @include adaptiveValue(margin-left, 20px, 11px, 1440px, 375px);
+
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            width: 100%;
+
+            @media (max-width:767px) {
+                flex-direction: column;
+                gap: 54px;
+            }
+        }
+    }
+
+    &-member {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+
+        &__name {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+            color: #355f87;
+            margin-bottom: 8px;
+        }
+        &__job {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            text-align: center;
+            color: #5f83a5;
+        }
+        &__img {
+            margin-top: 58px;
+
+            @media (max-width:767px) {
+                @include adaptiveValue (margin-top, 42px, 22px, 767px, 375px)
+            }
+
+            img {
+                display: flex;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+
+
+    &__bottom {
+        background: #5f83a5;
+
+        padding-top: 180px;
+        padding-bottom: 78px;
+
+        position: relative;
+        top: -136px;
+        
+        @media (max-width:467px) {
+            position: unset;
+            padding-top: 56px;
+            padding-bottom: 52px;
+        }
+
+        &__container {
+            max-width: 1264px;
+            margin: 0 auto;
+            
+        }
+
+        &__wrapper {
+            display: flex;
+
+            @media (max-width:767px) {
+                flex-direction: column;
+            }
+        }
+
+        .our-story-text-block {
+            display: flex;
+            flex-direction: column;
+
+            margin-left: 44px;
+            margin-right: 44px;
+
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -44px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color:#ffac46;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: -36px;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background-color: #ffac46;
+            }
+
+            &__title {
+                font-family: var(--second-family);
+                font-weight: 600;
+                font-size: 24px;
+                text-align: left;
+                color: #fff;
+
+                margin-bottom: 22px;
+
+                @media (max-width:767px) {
+                    @include adaptiveValue(font-size, 24px, 18px, 767px, 375px);
+                }
+                
+            }
+            &__subtitle {
+                font-family: var(--font-family);
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 150%;
+                color: #fff;
+
+                @media (max-width:767px) {
+                    margin-bottom: 54px;
+                }
+            }
+        }
+    }
+}
