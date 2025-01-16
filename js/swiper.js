@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       navigation: {
-        nextEl: '.team-slider-button-next',
-        prevEl: '.team-slider-button-prev',
+        nextEl: '.team-slider__button-next',
+        prevEl: '.team-slider__button-prev',
       },
       pagination: {
         el: '.swiper-pagination',
@@ -205,4 +205,20 @@ document.addEventListener("DOMContentLoaded", () => {
           mobileMenu.classList.remove("active");
       }
   });
+});
+
+
+// 	sticky header
+document.addEventListener("DOMContentLoaded", () => {
+	const header = document.querySelector('.header');
+
+
+	window.addEventListener('scroll', () => {
+
+	  if (window.scrollY > 60) {
+		header.classList.add('sticky');
+	  } else {
+		header.classList.remove('sticky');
+	  }
+	});
 });
